@@ -45,6 +45,7 @@ importlib-metadata==6.8.0
 isodate==0.6.1
 itsdangerous==2.1.2
 jaraco.classes==3.3.0
+jeepney==0.8.0
 Jinja2==3.1.2
 jmespath==1.0.1
 jsonschema==3.2.0
@@ -89,6 +90,7 @@ ruamel.yaml==0.17.26
 ruamel.yaml.clib==0.2.7
 schema-salad==8.4.20230511084951
 scipy==1.10.1
+SecretStorage==3.3.3
 shellingham==1.5.0.post1
 six==1.16.0
 sklearn==0.0.post5
