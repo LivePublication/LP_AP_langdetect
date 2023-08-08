@@ -296,6 +296,7 @@ def my_action_release(action_id: str, auth: AuthState) -> ActionCallbackReturn:
 
     action_status.display_status = f"Released by {auth.effective_identity}"
     # TODO action is not actually release (e.g. removed form backend database)
+    # caller_id = auth.effective_identity - effective_identity is indexed in backend
 
     return action_status
 
