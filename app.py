@@ -20,6 +20,7 @@ def create_app():
     image_name = "computation_image:latest"
     image_list = [img.tags[0] for img in docker_client.images.list() if img.tags]
     if image_name not in image_list:
+        print("computation_image not find. Attempting to build from method_resources/computation_docker")
         # If image is not avaliable, try to build it
         try: 
             resource_dir = os.path.dirname(os.path.abspath(__file__))
@@ -29,11 +30,10 @@ def create_app():
             print(f"An error occurred: {e}. Your additional comment goes here.")
             sys.exit(1)
     else:
-        print(f"Docker image found: {image_name}")
+        print(f"Docker image found: {image_name}. Proceeding...")
 
     return app
 
 if __name__ == "__main__":
-    sys.path.clear()
     app = create_app()
     app.run(debug=True, host='0.0.0.0', port=8080)

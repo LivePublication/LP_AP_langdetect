@@ -49,5 +49,6 @@ __pycache__/
 #    config files    #
 ######################
 config.py
-
 nohup.out
+
+temp.txt
